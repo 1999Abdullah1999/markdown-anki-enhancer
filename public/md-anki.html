@@ -386,6 +386,10 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .toast.success { border-left: 4px solid #22c55e; }
 .toast.error { border-left: 4px solid #ef4444; }
 .toast.neutral { border-left: 4px solid var(--accent); }
+/* Arrow tokens: keep visual direction regardless of bidi context */
+.md-body .arrow { unicode-bidi: isolate; direction: ltr; display: inline-block; }
+/* KaTeX inside RTL paragraphs: keep math LTR */
+.md-body .katex, .md-body .katex-display { direction: ltr; unicode-bidi: isolate; }
 </style>
 </head>
 <body class="mode-split">
