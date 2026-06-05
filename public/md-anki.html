@@ -686,6 +686,7 @@ function renderMarkdown() {
   preview.querySelectorAll('pre code').forEach(block => {
     if (!block.classList.contains('hljs')) hljs.highlightElement(block);
   });
+  renderMath(preview);
   applyDirAuto(preview);
   replaceArrowsInTextNodes(preview);
   wrapSections();
